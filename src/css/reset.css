@@ -1,0 +1,15 @@
+*{
+    margin: 0;          /* (MARGIN) PROPRIEDADE USADA PARA DAR UM ESPAÇAMENTO EXTERNO DOS ELEMENTOS*/
+    padding: 0;         /* (PADDING) É UMA PROPRIEDADE QUE PERMITE FAZER ESPAÇAMENTO INTERNO (EXEMPLO: ESPAÇANDO O CONTEÚDO DAS BORDAS DO ELEMENTO)*/
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+

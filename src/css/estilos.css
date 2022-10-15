@@ -1,0 +1,147 @@
+body{
+    background-image: url(../imagens/fundo-site.jpg); /* BUSCA A IMAGEM DE FUNDO DO SITE*/
+    background-repeat: no-repeat;                     /* IMPEDE A IMAGEM DE FICAR SE REPETINDO*/
+    background-size: cover;                           /* AJUSTA A IMAGEM AO SEU TAMANHO TOTAL (PEGANDO O FUNDO E A PARTE DE BAIXO)*/
+    background-position: center;                      /* ALINHA A IMAGEM AO CENTRO DO (BODY), "BACKGROUND" POSIÇÃO DO FUNDO (IMAGEM)*/
+
+    font-family: 'VT323', monospace;              /* CARREGA A FONTE UTILIZADA "VT323, E CASO OCORRA ALGUM PROBLEMA NO CARREGAMENTO DA FONTE PRIMARIA, PASSA A UTILIZAR A "MONOSPACE" FONTE QUE SUBSTITUI*/ 
+    color: #f3f3f3;
+    font-size: 18px;                              /* TAMANHO DA FONTE (CADA LETRA OCUPA 18PX)*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;                            /* "HEIGHT" DEFINE ALTURA (*VH = VIEWPORT HEIGHT/ALTURA DA JANELA DO NAVEGADOR),( *100VH = 100% DA JANELA), "MIN-HEIGHT" ALTURA MINIMA DO BODY = 100VH, SE O CONTEÚDO DENTRO DELE FOR MAIOR DO QUE ISSO, RESPEITA O TAMANHO DO CONTEÚDO (NÃO CORTA PARTES POR CAUSA DO TAMANHO E GERA UM SCROLL PARA SUBIR/DESCER A PÁGINA)*/ 
+    padding: 30px;
+}
+
+.cartao{                                         /* PARA UTILIZAR UMA CLASSE É PRECISO COLOCAR O PONTO "." NA FRENTE*/
+    background-color: #070d12;
+    width: 370px;                                /* LARGURA (DO CARTÃO)*/
+    border: 2px solid #e126d9;                 /* COLOCA UMA BORADA EM VOLTA DO ELEMENTO, "SOLID" SOLIDA ( BORDA SOLIDA)*/ 
+    border-radius: 10px;                         /* RAIO DA BORDA (CRIA UM RAIO ENTORNO DAS PONTAS DA BORDA)*/
+    overflow: hidden;
+}
+
+/*.abas img{*/                                     /* ESTILIZA TODAS AS IMAGENS DENTRO DO ELEMENTO (CLASSE "ABAS")*/
+    /*width: 30px;*/                                /* LARGURA*/
+/*}*/
+
+.cartao .minhas-informacoes{
+    padding-top: 20px;                         /* ESPAÇAMENTO (SÓ NA PARTE DE CIMA)*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;                       /* ALINHA HORIZONTALMENTE POR CAUSA DO FLEX DIRECTION COLUMN*/
+    gap: 10px;                                 /* ESPAÇAMENTO ENTRE ITENS*/
+}
+
+.cartao .minhas-informacoes img{               /* ESTILIZAR TODAS AS "IMAGENS" QUE ESTÃO DENTRO DE UMA CLASSE "MINHAS INFORMAÇÕES" QUE ESTÃO DENTRO DE UMA CLASSE "CARTÃO" (ASSIM SEMPRE SEGUINDO A HIERARQUIA DAS CLASSES)*/
+    border-radius: 50px;
+    border: 4px solid #02d08f;
+    width: 96px;
+    height: 96px;
+}
+
+.cartao .minhas-informacoes .nome{
+    font-size: 26px;                           /* TAMANHO DA FONTE */
+}
+
+.cartao .mihas-informacoes .cargo{
+    font-size: 20px;                           /* TAMANHO DA FONTE */
+    color: #b8bbc5;
+}
+
+.cartao .conteudo{
+    margin-top: 15px;
+}
+
+.cartao .abas{
+    display: flex;
+}
+
+.cartao .abas .aba{
+    width: 50%;                               /* LARGURA (DIVIDE A LARGURA TOTAL DA "ABA PAI" EM 50% PARA AS DUAS ABAS FILHAS)*/
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    cursor: pointer;                          /*SINALIZA O CURSOR QUE ALI PODE SER CLICADO*/
+    transition: background-color 0.2s ease-in-out;
+}
+
+.cartao .abas img{
+    width: 30px;
+}
+.cartao .abas .aba.selecionado{
+    background-color: #262626;
+}
+
+.cartao .informacoes-abas{
+    background-color: #262626;
+}
+
+.cartao .abas .aba:hover{                     /* "HOVER" PASSAR POR CIMA (POR CIMA DA CLASSE ABA)*/
+    background-color: #414141;
+}
+
+.informacoes-abas .informacao{
+    min-height: 260px;
+    padding: 15px;
+    display: none;
+}
+
+.informacoes-abas .informacao.selecionado{
+    display: block;
+}
+
+.informacoes-abas .sub-titulo{
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.informacoes-abas .descricao{
+    font-size: 20px;
+    max-height: 180px;
+    overflow-y: auto;
+    padding-right: 15px;
+}
+
+.informacoes-abas .descricao span{
+    color: #02d08f;
+}
+
+.redes-sociais{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    max-height: 180px;
+    overflow-y: auto;
+}
+
+.redes-sociais li a{
+    /*background-color: red;*/
+    width: 250px;
+    display: block;
+    color: #f3f3f3;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.redes-sociais li a:hover{
+    opacity: 0.8;
+}
+
+.redes-sociais .curriculo{                  /*CURRICULO*/
+    background-color: gray;
+}
+
+.redes-sociais .linkedin{
+    background-color: #1d87bd;
+}
+
+.redes-sociais .github{                  /*GITHUB*/
+    background-color: green;
+}
+
